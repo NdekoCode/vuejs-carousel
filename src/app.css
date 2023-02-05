@@ -44,6 +44,28 @@ button {
   font-size: 1rem;
   color: #fff;
 }
+.carousel__pagination {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  text-align: center;
+}
+.carousel__pagination button {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  border: none;
+  background-color: #444;
+  opacity: 0.8;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+.carousel__pagination button.active {
+  background-color: #fff;
+}
 @media screen and (min-width: 380px) {
   .container {
     padding: 0;

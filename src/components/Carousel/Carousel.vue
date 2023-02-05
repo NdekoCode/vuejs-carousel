@@ -39,6 +39,15 @@
         />
       </svg>
     </button>
+    <div class="carousel__pagination">
+      <button
+        class=""
+        v-for="item in slidesCount"
+        :key="item"
+        @click="goTo(item - 1)"
+        :class="{ active: item - 1 === index }"
+      ></button>
+    </div>
   </div>
 </template>
 
@@ -49,10 +58,16 @@ export default {
     return {
       index: 0,
       slides: [],
+      direction: "right",
     };
   },
   methods: {
+    goTo(index) {
+      this.direction = index > this.index ? "right" : "left";
+      this.index = index;
+    },
     next() {
+      this.direction = "right";
       if (this.index < this.slidesCount - 1) {
         this.index++;
       } else {
@@ -60,6 +75,7 @@ export default {
       }
     },
     prev() {
+      this.direction = "left";
       if (this.index > 0) {
         this.index--;
       } else {
@@ -74,9 +90,6 @@ export default {
   },
   mounted() {
     this.slides = this.$children;
-    this.slides.forEach((slide, index) => {
-      slide.index = index;
-    });
   },
 };
 </script>

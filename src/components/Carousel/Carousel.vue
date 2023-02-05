@@ -62,10 +62,6 @@
         ></button>
       </div>
     </div>
-    <!-- <div class="carousel">
-      <button class="btn" @click.stop="addSlide">Ajouter un slide</button>
-      <button class="btn" @click.stop="removeSlide">Supprimer un slide</button>
-    </div> -->
   </div>
 </template>
 
@@ -107,12 +103,6 @@ export default {
         this.nbrSlides++;
       }
     },
-    /*  removeSlide() {
-      if (this.nbrSlides >= 1 && this.nbrSlides !== this.index + 1) {
-        this.nbrSlides -= 1;
-      }
-      this.$forceUpdate();
-    }, */
   },
   computed: {
     slidesCount() {

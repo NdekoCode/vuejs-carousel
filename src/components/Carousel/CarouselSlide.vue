@@ -23,7 +23,13 @@ export default {
 </script>
 <style scoped>
 .slide-enter-active {
-  animation: slideIn 0.35s;
+  animation: slideIn 5s;
+}
+.slide-leave-active {
+  animation: slideOut 5s;
+  position: absolute;
+  inset: 0;
+  width: 100%;
 }
 @keyframes slideIn {
   from {
@@ -31,6 +37,15 @@ export default {
   }
   to {
     transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
 </style>

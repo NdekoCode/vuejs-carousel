@@ -28,8 +28,21 @@ button {
   max-width: 940px;
   margin: 0 auto;
 }
+.carousel {
+  overflow-x: hidden;
+}
 .mt-5 {
   margin-top: calc(0.25rem * 5);
+}
+.carousel__text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #fff;
 }
 @media screen and (min-width: 380px) {
   .container {

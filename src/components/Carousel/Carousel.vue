@@ -1,11 +1,43 @@
 <template>
-  <div>
+  <div class="carousel">
     <slot></slot>
-    <button class="carousel__nav carousel__next" @click.prevent="next">
-      Suivant
-    </button>
     <button class="carousel__nav carousel__prev" @click.prevent="prev">
-      Precedent
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="ionicon"
+        heigth="24"
+        width="24"
+        viewBox="0 0 512 512"
+      >
+        <title>Chevron Back</title>
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="48"
+          d="M328 112L184 256l144 144"
+        />
+      </svg>
+    </button>
+    <button class="carousel__nav carousel__next" @click.prevent="next">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="ionicon"
+        heigth="24"
+        width="24"
+        viewBox="0 0 512 512"
+      >
+        <title>Chevron Forward</title>
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="48"
+          d="M184 112l144 144-144 144"
+        />
+      </svg>
     </button>
   </div>
 </template>
@@ -53,5 +85,27 @@ export default {
 <style scoped>
 .carousel {
   position: relative;
+}
+.carousel__nav {
+  height: 65px;
+  background-color: #222;
+  color: #eee;
+  width: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.carousel__nav.carousel__next {
+  right: 15px;
+  left: auto;
+  transform: translateY(-50%);
+}
+.carousel__nav svg {
+  fill: currentColor;
 }
 </style>

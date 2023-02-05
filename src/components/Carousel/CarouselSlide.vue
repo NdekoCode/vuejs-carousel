@@ -1,8 +1,9 @@
 <template>
-  <div v-if="visible">
-    Index: {{ index }} Visible ? {{ visible }}
-    <slot></slot>
-  </div>
+  <transition name="slide">
+    <div v-if="visible">
+      <slot></slot>
+    </div>
+  </transition>
 </template>
 <script>
 export default {
@@ -20,4 +21,16 @@ export default {
   },
 };
 </script>
-<style></style>
+<style scoped>
+.slide-enter-active {
+  animation: slideIn 0.35s;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+</style>

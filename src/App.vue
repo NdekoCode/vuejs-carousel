@@ -1,21 +1,16 @@
 <template>
-  <div id="app" class="container">
-    <Carousel>
-      <CarouselSlide>Salut les gens</CarouselSlide>
-      <CarouselSlide>Salut les geeks</CarouselSlide>
-    </Carousel>
+  <div id="app" class="container mt-5">
+    <Carousel />
   </div>
 </template>
 
 <script>
 import Carousel from "./components/Carousel/Carousel";
-import CarouselSlide from "./components/Carousel/CarouselSlide";
 
 export default {
   name: "App",
   components: {
     Carousel,
-    CarouselSlide,
   },
 };
 </script>

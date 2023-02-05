@@ -4,8 +4,9 @@
       <CarouselSlide v-for="slide in nbrSlides" :index="slide - 1" :key="slide">
         <h3 class="carousel__text">Salut les gens {{ slide }}</h3>
         <img
+          class="img"
           width="940"
-          height="300"
+          height="100"
           :src="
             require('@/assets/images/' +
               slide.toString().padStart(2, '0') +

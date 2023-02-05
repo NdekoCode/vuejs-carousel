@@ -1,6 +1,6 @@
 <template>
   <transition :name="transition">
-    <div v-if="visible">
+    <div v-if="visible" class="carousel__container">
       <slot></slot>
     </div>
   </transition>

@@ -13,8 +13,17 @@
 #app img {
   object-fit: cover;
 }
+.carousel__container {
+  overflow-y: hidden;
+  max-width: 940px;
+}
+.carousel__container img {
+  height: 300px;
+}
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 button {
   border: none;
@@ -71,6 +80,7 @@ button {
     padding: 0;
   }
 }
+
 .btn {
   padding: 8px 12px;
   border: rounded;

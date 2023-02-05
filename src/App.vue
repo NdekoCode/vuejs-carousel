@@ -1,8 +1,23 @@
 <template>
   <div id="app" class="container">
     <Carousel>
-      <CarouselSlide>Salut les gens</CarouselSlide>
-      <CarouselSlide>Salut les geeks</CarouselSlide>
+      <CarouselSlide>
+        <p>Salut les gens</p>
+        <img src="https://loremflickr.com/630/300/mangas?lock=1" alt="" />
+      </CarouselSlide>
+      <CarouselSlide
+        ><p>Salut les geeks</p>
+
+        <img
+          src="https://loremflickr.com/630/300/jujutsukaisen?lock=2"
+          alt=""
+        />
+      </CarouselSlide>
+      <CarouselSlide>
+        <p>Salut les geeks</p>
+
+        <img src="https://loremflickr.com/630/300/mangas?lock=3" alt="" />
+      </CarouselSlide>
     </Carousel>
   </div>
 </template>
